@@ -108,7 +108,7 @@
           <a class="soc" href="https://www.linkedin.com/in/perryazevedo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
           <a class="soc" href="https://dribbble.com/perryazevedo" target="_blank" rel="noopener" aria-label="Dribbble"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm7.93 5.53a10.17 10.17 0 0 1 2.3 6.36c-.34-.07-3.7-.75-7.08-.33-.07-.17-.15-.35-.23-.53-.21-.5-.45-1.01-.69-1.5 3.74-1.52 5.44-3.71 5.7-4zM12 1.78c2.6 0 4.98.98 6.78 2.58-.22.31-1.75 2.36-5.36 3.71a52.3 52.3 0 0 0-3.77-5.88c.74-.18 1.54-.27 2.35-.27zM7.3 2.85a63.2 63.2 0 0 1 3.74 5.8C6.32 9.9 2.18 9.88 1.73 9.88a10.26 10.26 0 0 1 5.57-7.03zM1.5 12.01v-.31c.44.01 5.3.07 10.33-1.44.29.56.56 1.13.81 1.7l-.4.12c-5.2 1.68-7.96 6.26-8.19 6.65A10.2 10.2 0 0 1 1.5 12zm10.5 10.22c-2.3 0-4.42-.77-6.12-2.07.18-.37 2.07-4.01 7.76-6l.07-.02a42.8 42.8 0 0 1 2.2 7.83 10.2 10.2 0 0 1-3.91.26zm5.65-1.32c-.1-.6-.66-3.67-2.02-7.41 3.18-.51 5.96.32 6.31.43a10.23 10.23 0 0 1-4.29 6.98z"/></svg></a>
         </div>
-        <a href="#contact" class="nav-link" style="display:flex;align-items:center;gap:8px;border:1px solid rgba(196,151,47,.7);color:#e3c884;padding:9px 16px;">Contact</a>
+        <a class="soc email-icon" href="#" data-user="hello" data-domain="perryazevedo.com" rel="nofollow" aria-label="Email Perry"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
       </div>
     </nav>
 
@@ -293,6 +293,9 @@
       var addr = a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
       a.href = 'mailto:' + addr;
       a.textContent = addr;
+    });
+    document.querySelectorAll('.email-icon').forEach(function (a) {
+      a.href = 'mailto:' + a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
     });
   })();
 </script>
