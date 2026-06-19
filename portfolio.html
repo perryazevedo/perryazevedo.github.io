@@ -188,7 +188,7 @@
         </div>
       </div>
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:64px;padding-top:24px;border-top:1px solid rgba(147,168,144,.2);font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7e8c79;">
-        <span>Perry Azevedo · Seattle</span>
+        <span>© <span class="year">2026</span> NeoPolymath LLC. All rights reserved. Made in the Pacific Northwest.</span>
         <span>Rooted in faith · craft · technology · truth</span>
       </div>
     </div>
@@ -223,6 +223,9 @@
       a.href = 'mailto:' + a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
     });
   })();
+
+  // Keep the copyright year current automatically.
+  document.querySelectorAll('.year').forEach(function (e) { e.textContent = new Date().getFullYear(); });
 
   // Keep portfolio videos looping/muted even where autoplay attributes are throttled.
   document.querySelectorAll('video').forEach(function (v) {
