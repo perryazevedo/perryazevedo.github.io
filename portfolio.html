@@ -15,7 +15,7 @@
 <meta property="og:image" content="https://perryazevedo.com/assets/pf-waveneuro.png">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='38%25' cy='34%25'%3E%3Cstop offset='0' stop-color='%23ecd9a3'/%3E%3Cstop offset='0.6' stop-color='%23c4972f'/%3E%3Cstop offset='1' stop-color='%238a6a1e'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='15' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a1c14'/%3E%3Cpolygon points='16,5 27,16 16,27 5,16' fill='%23c4972f'/%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,13 +32,20 @@
   [data-reveal].reveal-in{animation:riseUp 1s cubic-bezier(.2,.7,.2,1) forwards;}
   .nav-link{text-decoration:none;transition:color .25s ease;}
   .nav-link:hover{color:#e3c884;}
+  .socials{display:flex;align-items:center;gap:18px;}
+  .soc{display:inline-flex;align-items:center;color:#bcc9b6;transition:color .25s ease;}
+  .soc:hover{color:#e3c884;}
+  .soc svg{width:17px;height:17px;display:block;fill:currentColor;}
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
     [data-reveal].reveal-in{animation:none;}
     *{animation-duration:.001s !important;}
   }
   @media (max-width:760px){
-    nav{padding:22px !important;}
+    nav{padding:20px 18px !important;}
+    .nav-menu{gap:14px !important;}
+    .socials{gap:15px !important;}
+    .soc svg{width:18px !important;height:18px !important;}
     header{padding:72px 22px 72px !important;}
     header h1{font-size:42px !important;}
     section{padding:64px 22px 84px !important;}
@@ -47,7 +54,17 @@
     .pf-project > div{order:0 !important;}
     .pf-project h2{font-size:38px !important;}
     footer{padding:64px 22px 40px !important;}
-    footer a[href^="mailto"]{font-size:38px !important;}
+    footer .email-link{font-size:38px !important;}
+  }
+  @media (max-width:520px){
+    nav{padding:18px 16px !important;}
+    nav span[style*="Cormorant Garamond"]{font-size:18px !important;}
+    .nav-menu{gap:12px !important;}
+    .socials{gap:13px !important;}
+    .soc svg{width:17px !important;height:17px !important;}
+    .nav-menu > a.nav-link{padding:7px 11px !important;font-size:10px !important;letter-spacing:.1em !important;}
+    header h1{font-size:36px !important;}
+    footer .email-link{font-size:32px !important;}
   }
 </style>
 </head>
@@ -59,11 +76,15 @@
   <nav style="position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:30px 56px;border-bottom:1px solid rgba(201,162,61,.18);">
     <a href="index.html" class="nav-link" style="display:flex;align-items:center;gap:11px;color:#f1ead7;">
       <span style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#c4972f;">←</span>
-      <span style="width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 38% 34%,#ecd9a3,#c4972f 60%,#8a6a1e);display:inline-block;"></span>
       <span style="font-family:'Cormorant Garamond',serif;font-size:21px;letter-spacing:.03em;white-space:nowrap;">Perry Azevedo</span>
     </a>
-    <div style="display:flex;align-items:center;gap:30px;font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#bcc9b6;">
-      <a href="index.html" class="nav-link">Home</a>
+    <div class="nav-menu" style="display:flex;align-items:center;gap:26px;font-family:'Space Mono',monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#bcc9b6;">
+      <div class="socials">
+        <a class="soc" href="https://x.com/perryazevedo" target="_blank" rel="noopener" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a class="soc" href="https://www.instagram.com/perryazevedo/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.13-.67-.66-1.34-1.07-2.13-1.38-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.41-10.4a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+        <a class="soc" href="https://www.linkedin.com/in/perryazevedo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a class="soc" href="https://dribbble.com/perryazevedo" target="_blank" rel="noopener" aria-label="Dribbble"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm7.93 5.53a10.17 10.17 0 0 1 2.3 6.36c-.34-.07-3.7-.75-7.08-.33-.07-.17-.15-.35-.23-.53-.21-.5-.45-1.01-.69-1.5 3.74-1.52 5.44-3.71 5.7-4zM12 1.78c2.6 0 4.98.98 6.78 2.58-.22.31-1.75 2.36-5.36 3.71a52.3 52.3 0 0 0-3.77-5.88c.74-.18 1.54-.27 2.35-.27zM7.3 2.85a63.2 63.2 0 0 1 3.74 5.8C6.32 9.9 2.18 9.88 1.73 9.88a10.26 10.26 0 0 1 5.57-7.03zM1.5 12.01v-.31c.44.01 5.3.07 10.33-1.44.29.56.56 1.13.81 1.7l-.4.12c-5.2 1.68-7.96 6.26-8.19 6.65A10.2 10.2 0 0 1 1.5 12zm10.5 10.22c-2.3 0-4.42-.77-6.12-2.07.18-.37 2.07-4.01 7.76-6l.07-.02a42.8 42.8 0 0 1 2.2 7.83 10.2 10.2 0 0 1-3.91.26zm5.65-1.32c-.1-.6-.66-3.67-2.02-7.41 3.18-.51 5.96.32 6.31.43a10.23 10.23 0 0 1-4.29 6.98z"/></svg></a>
+      </div>
       <a href="#contact" class="nav-link" style="display:flex;align-items:center;gap:8px;border:1px solid rgba(196,151,47,.7);color:#e3c884;padding:9px 16px;">Contact</a>
     </div>
   </nav>
@@ -165,7 +186,7 @@
       <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:40px;">
         <div>
           <div style="font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#93a890;margin-bottom:18px;">Like something? Let's talk</div>
-          <a href="mailto:hello@perryazevedo.com" style="font-family:'Cormorant Garamond',serif;font-size:54px;color:#f4efe1;text-decoration:none;line-height:1;">hello<span>&#64;</span>perryazevedo.com</a>
+          <a class="email-link" href="#" data-user="hello" data-domain="perryazevedo.com" rel="nofollow" style="font-family:'Cormorant Garamond',serif;font-size:54px;color:#f4efe1;text-decoration:none;line-height:1;">hello&nbsp;<span style="font-style:italic;color:#e3c884;">[at]</span>&nbsp;perryazevedo.com</a>
         </div>
         <div style="display:flex;gap:26px;font-family:'Space Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#bcc9b6;">
           <a href="index.html" class="nav-link">Home</a>
@@ -195,6 +216,15 @@
       });
     }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
     els.forEach(function (el) { io.observe(el); });
+  })();
+
+  // Assemble email at runtime so the address never sits in the HTML source for scrapers.
+  (function () {
+    document.querySelectorAll('.email-link').forEach(function (a) {
+      var addr = a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
+      a.href = 'mailto:' + addr;
+      a.textContent = addr;
+    });
   })();
 
   // Keep portfolio videos looping/muted even where autoplay attributes are throttled.
